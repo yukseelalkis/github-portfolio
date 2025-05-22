@@ -104,15 +104,16 @@ a:hover {
   top: 100%;
   left: 0;
   background-color: white;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
+  padding: 0; /* burada padding sıfırlandığına dikkat et */
+  margin: 0;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
-  z-index: 10;
+  z-index: 100;
 }
 
 .menu-links.open {
@@ -120,10 +121,11 @@ a:hover {
   border-bottom: 1px solid #ccc;
 }
 .menu-links a {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   font-size: 1.2rem;
   text-align: left;
+  margin: 0;
 }
 
 .menu-links li {
