@@ -148,7 +148,7 @@ a:hover {
 
 /* Hamburger icon dönüş animasyonu */
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(30]git deg) translate(5px, 5px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
