@@ -1,310 +1,374 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yüksel Alkış | Portfolio</title>
+    <meta name="description" content="Yüksel Alkış — Bilgisayar Mühendisi, Mobil & Backend Yazılım Geliştirici. Flutter, .NET, Next.js, Supabase." />
+    <title>Yüksel Alkış | Portfolyo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Yüksel Alkış</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora__blob aurora__blob--1"></span>
+      <span class="aurora__blob aurora__blob--2"></span>
+      <span class="aurora__blob aurora__blob--3"></span>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <nav id="site-nav">
+      <div class="nav-inner">
+        <a href="#top" class="logo">YA<span class="logo-dot">.</span></a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+          <li><a href="#experience" data-tr="Deneyim" data-en="Experience">Deneyim</a></li>
+          <li><a href="#projects" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+          <li><a href="#skills" data-tr="Yetkinlikler" data-en="Skills">Yetkinlikler</a></li>
+          <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Yüksel Alkış</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+        <div class="nav-actions">
+          <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+            <span class="lang-option" data-lang="tr">TR</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-option" data-lang="en">EN</span>
+          </button>
+          <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
     </nav>
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="assets/profile-pic.png"
-          alt="Yüksel Alkış profile picture"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Yüksel Alkış</h1>
-        <p class="section__text__p2">Flutter Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('assets/yuksel-cv.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="assets/linkedin.png"
-            class="icon"
-            alt="LinkedIn"
-            onclick="location.href='www.linkedin.com/in/yüksel-alkış'"
-          />
-          <img
-            src="assets/github.png"
-            class="icon"
-            alt="GitHub"
-            onclick="location.href='https://github.com/yukseelalkis'"
-          />
-        </div>
-      </div>
-    </section>
+    <main>
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="hero__text reveal">
+          <p class="eyebrow" data-tr="Merhaba, ben" data-en="Hi, I'm">Merhaba, ben</p>
+          <h1 class="hero__name">Yüksel Alkış</h1>
+          <p class="hero__role" data-tr="Bilgisayar Mühendisi · Mobil &amp; Backend Geliştirici" data-en="Computer Engineer · Mobile &amp; Backend Developer">Bilgisayar Mühendisi · Mobil &amp; Backend Geliştirici</p>
 
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="assets/about-pic.png"
-            alt="About picture"
-            class="about-pic"
-          />
+          <div class="hero__meta">
+            <span class="pill">
+              <svg viewBox="0 0 24 24" class="pill-icon"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5" fill="var(--bg)" stroke="currentColor"/></svg>
+              <span data-tr="Bodrum, Türkiye" data-en="Bodrum, Türkiye">Bodrum, Türkiye</span>
+            </span>
+            <span class="pill pill--accent">
+              <svg viewBox="0 0 24 24" class="pill-icon"><circle cx="12" cy="12" r="4"/></svg>
+              <span data-tr="İzmir &amp; çevresinde iş arıyorum" data-en="Open to roles in İzmir &amp; nearby">İzmir &amp; çevresinde iş arıyorum</span>
+            </span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn--primary" href="assets/yuksel-cv.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" class="btn-icon"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+              <span data-tr="CV İndir" data-en="Download CV">CV İndir</span>
+            </a>
+            <a class="btn btn--ghost" href="#contact">
+              <span data-tr="İletişime Geç" data-en="Get in Touch">İletişime Geç</span>
+            </a>
+          </div>
+
+          <div class="socials">
+            <a href="https://github.com/yukseelalkis" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.96.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a10.98 10.98 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.77.11 3.06.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.21.66.8.55A10.98 10.98 0 0 0 23.5 12c0-6.37-5.15-11.5-11.5-11.5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/yüksel-alkış" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001ZM.5 21.5h8.9V8.98H.5V21.5Zm14.5-12.52c-2.5 0-4.16 1.37-4.84 2.67h-.07V9.4h-3.79v12.1h3.95v-6.05c0-1.6.3-3.14 2.28-3.14 1.96 0 1.98 1.83 1.98 3.24v5.95h3.95v-6.72c0-3.42-.74-6.05-4.36-6.05Z"/></svg>
+            </a>
+            <a href="mailto:yukselalkis145@gmail.com" aria-label="Email" class="social-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.2 2 7.3 6.1a1 1 0 0 0 1 0L19.8 7"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="assets/experience.png"
-                class="icon"
-                alt="Experience"
-              />
-              <h3>Experience</h3>
-              <p>1+ year<br />Mobile Development</p>
+
+        <div class="hero__pic reveal">
+          <div class="pic-glow"></div>
+          <img src="assets/profile-pic.png" alt="Yüksel Alkış" />
+        </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll down">
+          <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <p class="section-eyebrow reveal" data-tr="Beni tanı" data-en="Get to know me">Beni tanı</p>
+        <h2 class="section-title reveal" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+
+        <div class="about-grid">
+          <div class="about-pic-wrap reveal">
+            <img src="assets/about-pic.png" alt="Yüksel Alkış" class="about-pic" />
+            <div class="about-pic-frame"></div>
+          </div>
+
+          <div class="about-content reveal">
+            <div class="stat-row">
+              <div class="stat-card">
+                <svg viewBox="0 0 24 24" class="stat-icon"><path d="M4 7h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7Zm3 0V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>
+                <h3 data-tr="Deneyim" data-en="Experience">Deneyim</h3>
+                <p data-tr="Lise yıllarından beri yaz dönemlerinde çalışıyorum; hâlihazırda MaviKalem'de bilgisayar mühendisiyim." data-en="Working every summer since high school; currently a computer engineer at MaviKalem.">Lise yıllarından beri yaz dönemlerinde çalışıyorum; hâlihazırda MaviKalem'de bilgisayar mühendisiyim.</p>
+              </div>
+              <div class="stat-card">
+                <svg viewBox="0 0 24 24" class="stat-icon"><path d="M22 10 12 5 2 10l10 5 10-5Zm-5 3.2V17c0 1.1-2.24 2-5 2s-5-.9-5-2v-3.8"/></svg>
+                <h3 data-tr="Eğitim" data-en="Education">Eğitim</h3>
+                <p data-tr="Bilgisayar Mühendisliği (Lisans)<br/>İskenderun Teknik Üniversitesi" data-en="B.Sc. Computer Engineering<br/>İskenderun Technical University">Bilgisayar Mühendisliği (Lisans)<br/>İskenderun Teknik Üniversitesi</p>
+              </div>
             </div>
-            <div class="details-container">
-              <img src="assets/education.png" class="icon" alt="Education" />
-              <h3>Education</h3>
-              <p>
-                B.Sc. Computer Engineering<br />İskenderun Teknik Üniversitesi
+
+            <div class="prose">
+              <p data-tr="İskenderun Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum, şu an Bodrum'da yaşıyorum ve İzmir ile çevresinde yeni fırsatlara açığım."
+                 data-en="I'm a Computer Engineering graduate from İskenderun Technical University, currently based in Bodrum and open to opportunities in İzmir and the surrounding region.">
+                İskenderun Teknik Üniversitesi Bilgisayar Mühendisliği mezunuyum, şu an Bodrum'da yaşıyorum ve İzmir ile çevresinde yeni fırsatlara açığım.
+              </p>
+              <p data-tr="Lise yıllarımdan beri yazları çalışıyorum: lise son sınıfın yazında English Home'da, üniversiteye başladığım yaz ise Vakko (W Collection) bünyesinde depo sorumlusu olarak görev aldım. Bu deneyimler bana perakende sektörünün işleyişini sahadan öğretti; bugün yazılım geliştirirken o operasyonel bakış açısını da işin içine katıyorum."
+                 data-en="I've worked every summer since high school — at English Home the summer before graduating, then as a warehouse associate at Vakko (W Collection) the summer I started university. That hands-on retail experience still shapes how I build software today: I understand the operational side of the systems, not just the code.">
+                Lise yıllarımdan beri yazları çalışıyorum: lise son sınıfın yazında English Home'da, üniversiteye başladığım yaz ise Vakko (W Collection) bünyesinde depo sorumlusu olarak görev aldım. Bu deneyimler bana perakende sektörünün işleyişini sahadan öğretti; bugün yazılım geliştirirken o operasyonel bakış açısını da işin içine katıyorum.
+              </p>
+              <p data-tr="Şu anda MaviKalem'de bilgisayar mühendisi olarak çalışıyorum; hem perakende operasyonlarına entegrasyonu hem de kullandığımız sistemin kurulumunu üstleniyorum. MaviKalem App, MaviKalem Satış ve MaviKalem Sayfa Üretim Aracı gibi uygulamaları uçtan uca geliştirdim. IdeaSoft altyapısıyla yoğun çalıştığım için bu ekosistemi yakından tanıyorum; ondan ilham alarak kendi web sitesi ve yönetim panelimi sıfırdan geliştirdim ve şu anda canlıda çalışıyor."
+                 data-en="I'm currently a computer engineer at MaviKalem, handling both the integration into retail operations and the system itself end-to-end — including MaviKalem App, MaviKalem Sales, and the MaviKalem Page Generator tool, all built by me from the ground up. Working closely with IdeaSoft's infrastructure, I also designed and built our own website and admin panel from scratch, inspired by it — it's live in production today.">
+                Şu anda MaviKalem'de bilgisayar mühendisi olarak çalışıyorum; hem perakende operasyonlarına entegrasyonu hem de kullandığımız sistemin kurulumunu üstleniyorum. MaviKalem App, MaviKalem Satış ve MaviKalem Sayfa Üretim Aracı gibi uygulamaları uçtan uca geliştirdim. IdeaSoft altyapısıyla yoğun çalıştığım için bu ekosistemi yakından tanıyorum; ondan ilham alarak kendi web sitesi ve yönetim panelimi sıfırdan geliştirdim ve şu anda canlıda çalışıyor.
+              </p>
+              <p data-tr="MaviKalem'in e-ticaret sitesi için Google Search Console ve Google Analytics kullanarak SEO çalışmaları yürütüyor, SiteBulb ile teknik SEO ve GEO analizleri yapıyorum."
+                 data-en="For MaviKalem's e-commerce site, I run SEO with Google Search Console and Analytics, and handle technical SEO / GEO analysis with SiteBulb.">
+                MaviKalem'in e-ticaret sitesi için Google Search Console ve Google Analytics kullanarak SEO çalışmaları yürütüyor, SiteBulb ile teknik SEO ve GEO analizleri yapıyorum.
               </p>
             </div>
           </div>
-      <div class="text-container">
-  <p>
-    I'm Yüksel, a Computer Engineering graduate from Iskenderun Technical University.
-    I specialize in Flutter and .NET development, with a strong passion for building efficient,
-    user-friendly, and visually appealing mobile applications and backend systems.
-  </p>
-  <p>FRZZ
-    I enjoy exploring new technologies and continuously improving my skills.
-    With a solid foundation in software engineering principles, I am eager to contribute to impactful projects
-    and grow as a mobile & backend developer.
-         </p>
-            </div>
-          </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
+      </section>
 
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Mobile & Frontend</h2>
-            <div class="article-container">
-              <article>
-                <img src="assets/flutter.png" class="icon" />
-                <div>
-                  <h3>Flutter</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/dart.png" class="icon" />
-                <div>
-                  <h3>Dart</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/html_css.png" class="icon" />
-                <div>
-                  <h3>HTML/CSS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/dart.png" class="icon" />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend & Tools</h2>
-            <div class="article-container">
-              <article>
-                <img src="assets/csharp.png" class="icon" />
-                <div>
-                  <h3>C# / .NET</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/mssql.png" class="icon" />
-                <div>
-                  <h3>MSSQL</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img src="assets/git.png" class="icon" />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <p class="section-eyebrow reveal" data-tr="Yolculuğum" data-en="My journey">Yolculuğum</p>
+        <h2 class="section-title reveal" data-tr="Deneyim" data-en="Experience">Deneyim</h2>
 
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/weather-app.png"
-                alt="Weather App"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Weather App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yukseelalkis/weather_app'"
-              >
-                GitHub
-              </button>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot timeline-dot--current"></div>
+            <div class="timeline-card">
+              <span class="timeline-badge" data-tr="Güncel" data-en="Current">Güncel</span>
+              <h3 data-tr="Bilgisayar Mühendisi — MaviKalem" data-en="Computer Engineer — MaviKalem">Bilgisayar Mühendisi — MaviKalem</h3>
+              <p data-tr="Perakende operasyonlarına sistem entegrasyonu ve kurulumu; MaviKalem App, Satış Uygulaması ve Sayfa Üretim Aracı'nın uçtan uca geliştirilmesi. IdeaSoft altyapısından ilham alan özel web sitesi ve yönetim paneli. SEO/GEO çalışmaları (Search Console, Analytics, SiteBulb)."
+                 data-en="System integration and setup for retail operations; end-to-end development of MaviKalem App, the Sales App, and the Page Generator tool. A custom website and admin panel inspired by IdeaSoft's infrastructure. SEO/GEO work (Search Console, Analytics, SiteBulb).">
+                Perakende operasyonlarına sistem entegrasyonu ve kurulumu; MaviKalem App, Satış Uygulaması ve Sayfa Üretim Aracı'nın uçtan uca geliştirilmesi. IdeaSoft altyapısından ilham alan özel web sitesi ve yönetim paneli. SEO/GEO çalışmaları (Search Console, Analytics, SiteBulb).
+              </p>
             </div>
           </div>
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/todolist.png"
-                alt="TodoList App"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">TodoList App</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yukseelalkis/TodoList'"
-              >
-                GitHub
-              </button>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-badge timeline-badge--muted" data-tr="Yaz Dönemi" data-en="Summer">Yaz Dönemi</span>
+              <h3 data-tr="Depo Sorumlusu — Vakko (W Collection)" data-en="Warehouse Associate — Vakko (W Collection)">Depo Sorumlusu — Vakko (W Collection)</h3>
+              <p data-tr="Üniversiteye başladığım yaz depo operasyonlarında görev aldım; perakende sektörünün işleyişini sahadan öğrendim." data-en="Worked in warehouse operations the summer I started university; learned the retail sector's workings first-hand.">Üniversiteye başladığım yaz depo operasyonlarında görev aldım; perakende sektörünün işleyişini sahadan öğrendim.</p>
             </div>
           </div>
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="assets/fintrack.png"
-                alt="FinTrack App"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">FinTrack</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/yukseelalkis/Fintrack'"
-              >
-                GitHub
-              </button>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-badge timeline-badge--muted" data-tr="Yaz Dönemi" data-en="Summer">Yaz Dönemi</span>
+              <h3 data-tr="English Home" data-en="English Home">English Home</h3>
+              <p data-tr="Lise son sınıfın yazında çalışarak iş hayatına ilk adımımı attım." data-en="My first work experience, the summer before finishing high school.">Lise son sınıfın yazında çalışarak iş hayatına ilk adımımı attım.</p>
             </div>
           </div>
         </div>
-      </div>
-      <img
-        src="assets/arrow.png"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
+      </section>
 
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="assets/email.png" class="icon contact-icon email-icon" />
-          <p>
-            <a href="mailto:yukselalkis145@gmail.com"
-              >yukselalkis145@gmail.com</a
-            >
-          </p>
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <p class="section-eyebrow reveal" data-tr="Neler yaptım" data-en="What I've built">Neler yaptım</p>
+        <h2 class="section-title reveal" data-tr="Projeler" data-en="Projects">Projeler</h2>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span class="status-dot status-dot--active"></span>
+              <span class="project-status" data-tr="TÜBİTAK destekli · Aktif geliştirme" data-en="TÜBİTAK-supported · Active development">TÜBİTAK destekli · Aktif geliştirme</span>
+            </div>
+            <h3>MezMaps</h3>
+            <p class="project-sub" data-tr="Dijital Mezarlık Bilgi &amp; Navigasyon Sistemi" data-en="Digital Cemetery Information &amp; Navigation System">Dijital Mezarlık Bilgi &amp; Navigasyon Sistemi</p>
+            <p data-tr="İskenderun pilot bölgesi için GPS destekli mezar konum bulma ve navigasyon uygulaması. Admin (defin kaydı) ve kullanıcı (arama/navigasyon) modülleri içerir." data-en="A GPS-assisted grave-location and navigation app for the İskenderun pilot region, with separate admin (burial records) and user (search/navigation) modules.">İskenderun pilot bölgesi için GPS destekli mezar konum bulma ve navigasyon uygulaması. Admin (defin kaydı) ve kullanıcı (arama/navigasyon) modülleri içerir.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Supabase</span><span class="tag">Geolocator</span>
+            </div>
+            <a class="project-link" href="https://github.com/yukseelalkis/MezMaps" target="_blank" rel="noopener">
+              <span data-tr="Repo'yu gör" data-en="View repo">Repo'yu gör</span>
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span class="status-dot status-dot--active"></span>
+              <span class="project-status" data-tr="Canlıda" data-en="Live in production">Canlıda</span>
+            </div>
+            <h3 data-tr="PDR Danışmanlık Platformu" data-en="PDR Counselling Platform">PDR Danışmanlık Platformu</h3>
+            <p class="project-sub" data-tr="Tanıtım sitesi + randevu yönetim paneli" data-en="Marketing site + appointment admin panel">Tanıtım sitesi + randevu yönetim paneli</p>
+            <p data-tr="Bir psikolojik danışman için canlıda çalışan tanıtım/blog sitesi ve randevu yönetim paneli. Uçtan uca full-stack: statik ön yüz, kimlik doğrulamalı yönetim paneli ve API." data-en="A live marketing/blog site and appointment admin panel for a psychological counsellor. Full-stack end-to-end: static frontend plus an authenticated admin panel and API.">Bir psikolojik danışman için canlıda çalışan tanıtım/blog sitesi ve randevu yönetim paneli. Uçtan uca full-stack: statik ön yüz, kimlik doğrulamalı yönetim paneli ve API.</p>
+            <div class="tag-row">
+              <span class="tag">Astro</span><span class="tag">Next.js</span><span class="tag">Auth.js</span><span class="tag">Drizzle ORM</span><span class="tag">PostgreSQL</span>
+            </div>
+            <a class="project-link" href="https://yukseelalkis.github.io/Pdr/" target="_blank" rel="noopener">
+              <span data-tr="Canlı siteyi gör" data-en="View live site">Canlı siteyi gör</span>
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span class="status-dot status-dot--progress"></span>
+              <span class="project-status" data-tr="Kurumsal · Aktif geliştirme" data-en="In-house · Active development">Kurumsal · Aktif geliştirme</span>
+            </div>
+            <h3>MaviKalem App</h3>
+            <p class="project-sub" data-tr="Depo &amp; Saha Satış Otomasyonu" data-en="Warehouse &amp; Field Sales Automation">Depo &amp; Saha Satış Otomasyonu</p>
+            <p data-tr="Perakende işletmesi için depo içi picking/packing ve saha satış mobil uygulaması. Supabase Realtime ile birden fazla çalışan eşzamanlı çalışabiliyor; Electron tabanlı masaüstü kontrol merkezi eşlik ediyor." data-en="A warehouse picking/packing and field sales mobile app for a retail business. Supabase Realtime lets multiple staff work concurrently, paired with an Electron desktop control center.">Perakende işletmesi için depo içi picking/packing ve saha satış mobil uygulaması. Supabase Realtime ile birden fazla çalışan eşzamanlı çalışabiliyor; Electron tabanlı masaüstü kontrol merkezi eşlik ediyor.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span><span class="tag">Riverpod</span><span class="tag">Supabase Realtime</span><span class="tag">Electron</span>
+            </div>
+            <span class="project-link project-link--muted" data-tr="Kurumsal iç araç — kaynak kodu özel" data-en="In-house tool — source is private">Kurumsal iç araç — kaynak kodu özel</span>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span class="status-dot status-dot--done"></span>
+              <span class="project-status" data-tr="Tamamlandı" data-en="Completed">Tamamlandı</span>
+            </div>
+            <h3 data-tr="MaviKalem Saha Satış Uygulaması" data-en="MaviKalem Field Sales App">MaviKalem Saha Satış Uygulaması</h3>
+            <p class="project-sub" data-tr="B2B mobil satış uygulaması" data-en="B2B mobile sales app">B2B mobil satış uygulaması</p>
+            <p data-tr="Saha temsilcilerinin okul ziyaretlerinde barkod okutup anlık fiyat sorgulaması yapması ve okul bazlı sipariş oluşturması için geliştirilen B2B mobil uygulama." data-en="A B2B mobile app that lets field reps scan barcodes for live pricing and build school-based orders during visits.">Saha temsilcilerinin okul ziyaretlerinde barkod okutup anlık fiyat sorgulaması yapması ve okul bazlı sipariş oluşturması için geliştirilen B2B mobil uygulama.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span><span class="tag">Riverpod</span><span class="tag">Dio</span><span class="tag">OAuth 2.0</span>
+            </div>
+            <span class="project-link project-link--muted" data-tr="Kurumsal iç araç — kaynak kodu özel" data-en="In-house tool — source is private">Kurumsal iç araç — kaynak kodu özel</span>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span class="status-dot status-dot--active"></span>
+              <span class="project-status" data-tr="Çalışır durumda" data-en="Working / stable">Çalışır durumda</span>
+            </div>
+            <h3>FinTrack</h3>
+            <p class="project-sub" data-tr="Finansal Takip Uygulaması + API" data-en="Financial Tracking App + API">Finansal Takip Uygulaması + API</p>
+            <p data-tr="Hisse ve kripto yatırımlarının takibini yapan full-stack uygulama; kendi geliştirdiğim .NET API'si üzerinden piyasa verisi, portföy ve yorum sistemi." data-en="A full-stack app for tracking stock and crypto investments, backed by a .NET API I built myself for market data, portfolios, and comments.">Hisse ve kripto yatırımlarının takibini yapan full-stack uygulama; kendi geliştirdiğim .NET API'si üzerinden piyasa verisi, portföy ve yorum sistemi.</p>
+            <div class="tag-row">
+              <span class="tag">Flutter</span><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span><span class="tag">SQL Server</span><span class="tag">JWT</span>
+            </div>
+            <a class="project-link" href="https://github.com/yukseelalkis/FinTrack" target="_blank" rel="noopener">
+              <span data-tr="Repo'yu gör" data-en="View repo">Repo'yu gör</span>
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__top">
+              <span class="status-dot status-dot--active"></span>
+              <span class="project-status" data-tr="Kullanımda" data-en="In use">Kullanımda</span>
+            </div>
+            <h3 data-tr="MaviKalem Sayfa Üretim Aracı" data-en="MaviKalem Page Generator">MaviKalem Sayfa Üretim Aracı</h3>
+            <p class="project-sub" data-tr="Masaüstü otomasyon aracı" data-en="Desktop automation tool">Masaüstü otomasyon aracı</p>
+            <p data-tr="IdeaSoft API'sinden ürün çekerek kırtasiye listesi ve teklif sayfası HTML'i üreten Electron masaüstü aracı; otomatik OAuth token yönetimi." data-en="An Electron desktop tool that pulls products from the IdeaSoft API to generate stationery-list and quote-page HTML, with automatic OAuth token management.">IdeaSoft API'sinden ürün çekerek kırtasiye listesi ve teklif sayfası HTML'i üreten Electron masaüstü aracı; otomatik OAuth token yönetimi.</p>
+            <div class="tag-row">
+              <span class="tag">Electron</span><span class="tag">IdeaSoft API</span><span class="tag">OAuth 2.0</span>
+            </div>
+            <a class="project-link" href="https://github.com/yukseelalkis/mavikalem-sayfa-uretim" target="_blank" rel="noopener">
+              <span data-tr="Repo'yu gör" data-en="View repo">Repo'yu gör</span>
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </article>
         </div>
-        <div class="contact-info-container">
-          <img src="assets/linkedin.png" class="icon contact-icon" />
-          <p><a href="www.linkedin.com/in/yüksel-alkış">LinkedIn</a></p>
+
+        <h3 class="subsection-title reveal" data-tr="Teknik Case'ler &amp; Öğrenme Projeleri" data-en="Technical Cases &amp; Learning Projects">Teknik Case'ler &amp; Öğrenme Projeleri</h3>
+        <div class="case-grid">
+          <a class="case-card reveal" href="https://github.com/yukseelalkis/smartmetric_case" target="_blank" rel="noopener">
+            <h4>SmartMetric CRM Case</h4>
+            <p data-tr="İş başvurusu için mini CRM: listeleme, arama, detay, not/aktivite." data-en="A mini CRM built for a job application: listing, search, detail view, notes/activity.">İş başvurusu için mini CRM: listeleme, arama, detay, not/aktivite.</p>
+            <div class="tag-row"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Auto Route</span></div>
+          </a>
+          <a class="case-card reveal" href="https://github.com/yukseelalkis/movie_app" target="_blank" rel="noopener">
+            <h4 data-tr="Movie App" data-en="Movie App">Movie App</h4>
+            <p data-tr="Film keşif uygulaması: auth, infinite scroll, favoriler, profil." data-en="A movie-discovery app: auth, infinite scroll, favorites, profile.">Film keşif uygulaması: auth, infinite scroll, favoriler, profil.</p>
+            <div class="tag-row"><span class="tag">Flutter</span><span class="tag">MVVM</span><span class="tag">Dio</span></div>
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- SKILLS / TECHNICAL DETAILS -->
+      <section id="skills" class="section">
+        <p class="section-eyebrow reveal" data-tr="Kullandığım araçlar" data-en="Tools I use">Kullandığım araçlar</p>
+        <h2 class="section-title reveal" data-tr="Teknik Detaylar" data-en="Technical Details">Teknik Detaylar</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3 data-tr="Mobil" data-en="Mobile">Mobil</h3>
+            <div class="tag-row"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Clean Architecture</span><span class="tag">MVVM</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="State Management" data-en="State Management">State Management</h3>
+            <div class="tag-row"><span class="tag">Riverpod</span><span class="tag">flutter_bloc / Cubit</span><span class="tag">RxDart</span><span class="tag">get_it</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="Backend &amp; Veri" data-en="Backend &amp; Data">Backend &amp; Veri</h3>
+            <div class="tag-row"><span class="tag">ASP.NET Core</span><span class="tag">Entity Framework Core</span><span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">Supabase</span><span class="tag">Drizzle ORM</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="Web" data-en="Web">Web</h3>
+            <div class="tag-row"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">Astro</span><span class="tag">Tailwind CSS</span><span class="tag">TypeScript</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="Kimlik Doğrulama" data-en="Authentication">Kimlik Doğrulama</h3>
+            <div class="tag-row"><span class="tag">JWT</span><span class="tag">OAuth 2.0</span><span class="tag">Auth.js</span><span class="tag">Supabase Auth</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="Masaüstü &amp; Otomasyon" data-en="Desktop &amp; Automation">Masaüstü &amp; Otomasyon</h3>
+            <div class="tag-row"><span class="tag">Electron</span><span class="tag">n8n</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="Diğer Araçlar" data-en="Other Tools">Diğer Araçlar</h3>
+            <div class="tag-row"><span class="tag">Dio</span><span class="tag">Hive</span><span class="tag">Firebase FCM</span><span class="tag">Geolocator</span><span class="tag">mobile_scanner</span><span class="tag">Git</span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3 data-tr="SEO &amp; Analitik" data-en="SEO &amp; Analytics">SEO &amp; Analitik</h3>
+            <div class="tag-row"><span class="tag">Google Search Console</span><span class="tag">Google Analytics</span><span class="tag">SiteBulb</span><span class="tag" data-tr="Teknik SEO" data-en="Technical SEO">Teknik SEO</span><span class="tag">GEO</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section--contact">
+        <p class="section-eyebrow reveal" data-tr="Konuşalım" data-en="Let's talk">Konuşalım</p>
+        <h2 class="section-title reveal" data-tr="İletişim" data-en="Contact">İletişim</h2>
+        <p class="contact-lead reveal" data-tr="Yeni fırsatlar ve iş birlikleri için ulaşmaktan çekinmeyin." data-en="Feel free to reach out about new opportunities or collaborations.">Yeni fırsatlar ve iş birlikleri için ulaşmaktan çekinmeyin.</p>
+
+        <div class="contact-grid reveal">
+          <a class="contact-card" href="mailto:yukselalkis145@gmail.com">
+            <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.2 2 7.3 6.1a1 1 0 0 0 1 0L19.8 7"/></svg>
+            <span>yukselalkis145@gmail.com</span>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/yüksel-alkış" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001ZM.5 21.5h8.9V8.98H.5V21.5Zm14.5-12.52c-2.5 0-4.16 1.37-4.84 2.67h-.07V9.4h-3.79v12.1h3.95v-6.05c0-1.6.3-3.14 2.28-3.14 1.96 0 1.98 1.83 1.98 3.24v5.95h3.95v-6.72c0-3.42-.74-6.05-4.36-6.05Z"/></svg>
+            <span>linkedin.com/in/yüksel-alkış</span>
+          </a>
+          <a class="contact-card" href="https://github.com/yukseelalkis" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.96.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a10.98 10.98 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.23 2.77.11 3.06.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.21.66.8.55A10.98 10.98 0 0 0 23.5 12c0-6.37-5.15-11.5-11.5-11.5Z"/></svg>
+            <span>github.com/yukseelalkis</span>
+          </a>
+          <div class="contact-card contact-card--static">
+            <svg viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-tr="Bodrum, Türkiye · İzmir'e uzak çalışma açığım" data-en="Bodrum, Türkiye · Open to remote/İzmir">Bodrum, Türkiye · İzmir'e uzak çalışma açığım</span>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright © 2025 Yüksel Alkış. All Rights Reserved.</p>
+      <p>&copy; <span id="year">2026</span> Yüksel Alkış. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
     </footer>
 
     <script src="index.js"></script>
   </body>
 </html>
-github-portfolio/index.html at main · yukseelalkis/github-portfolio 
